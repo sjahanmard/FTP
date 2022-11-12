@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { FileSchema } from "../../../models/File";
+import { FileSchema } from "../../models/File";
 import bcrypt from "bcrypt";
 
 export async function downloadFile(req: Request, res: Response) {

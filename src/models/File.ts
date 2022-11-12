@@ -1,6 +1,13 @@
 import mongoose from "mongoose";
 
-const File = new mongoose.Schema({
+export interface IFile {
+  path: string;
+  originalName: string;
+  password?: string;
+  downloadCount?: number;
+}
+
+const File = new mongoose.Schema<IFile>({
   path: {
     type: String,
     required: true,
